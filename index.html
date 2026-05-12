@@ -10,9 +10,15 @@
 <meta name="description" content="Зарабатывай до 35% с каждой подписки WinWinBot. Два уровня дохода. Стабильные выплаты на ИП, ООО, самозанятость."/>
 <meta name="theme-color" content="#7c3aed"/>
 <style>
+/* SELLING BLOCK MOBILE FIX */
+@media(max-width:768px) {
+  .selling-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+<style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fff; color: #111; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fff; color: #111; overflow-x: hidden; width: 100%; }
 
 /* GRADIENT UTILS */
 .grad-text { background: linear-gradient(135deg, #2563eb, #7c3aed, #db2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -36,7 +42,7 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: r
 @keyframes orbPulse { 0%,100%{opacity:.5;transform:scale(1)} 50%{opacity:.9;transform:scale(1.07)} }
 .hero-inner { max-width: 1320px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .hero-badge { display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px; background: linear-gradient(135deg, #eff6ff, #f5f3ff); border: 1px solid rgba(124,58,237,0.25); border-radius: 999px; font-size: 12px; font-weight: 700; color: #5b21b6; letter-spacing: .04em; margin-bottom: 20px; }
-.hero-h1 { font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.03em; margin-bottom: 20px; }
+.hero-h1 { font-size: clamp(1.8rem, 7vw, 3.4rem); font-weight: 900; line-height: 1.1; letter-spacing: -.03em; margin-bottom: 20px; }
 .hero-sub { font-size: 18px; color: #4b5563; line-height: 1.6; margin-bottom: 32px; max-width: 500px; }
 .hero-stats { display: flex; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
 .hero-stat { background: rgba(255,255,255,0.85); border: 1px solid rgba(124,58,237,0.18); border-radius: 14px; padding: 14px 20px; backdrop-filter: blur(8px); }
@@ -51,23 +57,6 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: r
 /* Hero visual */
 .hero-visual { background: linear-gradient(135deg, #1e1b4b, #312e81, #4c1d95); border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(79,70,229,0.4); position: relative; overflow: hidden; }
 .hero-visual::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; background: radial-gradient(circle, rgba(219,39,119,0.3), transparent 70%); border-radius:50%; }
-.dash-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 16px; }
-.dash-row { display: flex; gap: 12px; margin-bottom: 12px; }
-.dash-card { flex: 1; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 14px; backdrop-filter: blur(10px); }
-.dash-card-num { font-size: 20px; font-weight: 900; color: #fff; }
-.dash-card-sub { font-size: 10px; color: rgba(255,255,255,0.55); font-weight: 600; margin-top: 3px; text-transform: uppercase; letter-spacing: .04em; }
-.dash-bar-wrap { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 14px; }
-.dash-bar-title { font-size: 11px; color: rgba(255,255,255,0.6); font-weight: 600; margin-bottom: 10px; }
-.dash-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
-.dash-bar-name { font-size: 11px; color: rgba(255,255,255,0.7); width: 60px; flex-shrink: 0; }
-.dash-bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 999px; overflow: hidden; }
-.dash-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #818cf8, #c084fc); }
-.dash-bar-val { font-size: 10px; color: rgba(255,255,255,0.7); font-weight: 700; width: 50px; text-align: right; }
-.dash-ref { display: flex; gap: 8px; margin-top: 12px; }
-.dash-ref-item { flex:1; background: rgba(255,255,255,0.08); border-radius: 8px; padding: 10px; text-align:center; }
-.dash-ref-n { font-size:16px; font-weight:900; color:#a5b4fc; }
-.dash-ref-s { font-size:9px; color:rgba(255,255,255,0.5); font-weight:600; margin-top:2px; text-transform:uppercase; letter-spacing:.03em; }
-
 .hv-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 20px; }
 .hv-commission-block { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
 .hv-comm-row { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 16px 18px; }
@@ -184,7 +173,7 @@ section { padding: 80px 24px; }
 .calc-res-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 20px; text-align: center; transition: all .3s; }
 .calc-res-card.active { background: rgba(255,255,255,0.15); border-color: rgba(165,180,252,0.5); box-shadow: 0 0 0 2px rgba(129,140,248,0.3); }
 .calc-res-label { font-size: 11px; color: rgba(255,255,255,0.5); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
-.calc-res-amount { font-size: 26px; font-weight: 900; color: #fff; letter-spacing: -.02em; }
+.calc-res-amount { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -.02em; word-wrap: break-word; }
 .calc-res-sub { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 4px; font-weight: 600; }
 .calc-res-card-wide { grid-column: 1 / -1; }
 .calc-level-badge { text-align: center; margin-top: 24px; }
@@ -279,7 +268,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 @media(max-width:1024px){
   .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
-  .segments, .levels-grid, .milestones-track, .reviews, .why-grid { grid-template-columns: 1fr; }
+  .segments, .levels-grid, .milestones-track, .reviews, .why-grid, .selling-grid { grid-template-columns: 1fr !important; }
   .steps { grid-template-columns: 1fr; }
   .calc-grid { grid-template-columns: 1fr; }
   .calc-result { grid-template-columns: 1fr; }
@@ -293,7 +282,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   .hero-stats { flex-direction: column; gap: 12px; }
   .hero-buttons { flex-direction: column; }
   .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
-  .calc-result { grid-template-columns: 1fr 1fr !important; }
+  .calc-result { grid-template-columns: 1fr !important; gap: 12px; }
 }
 </style>
 </head>
@@ -379,14 +368,14 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 <section style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#4c1d95 100%);padding:80px 24px;">
   <div class="container" style="max-width:1100px;text-align:center;">
     <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:999px;font-size:12px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:.04em;margin-bottom:20px;text-transform:uppercase;">✦ Стань партнёром WinWinBot</div>
-    <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:16px;">
+    <h2 style="font-size:clamp(1.5rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.2;letter-spacing:-.03em;margin-bottom:16px;word-break:break-word;">
       Выиграй эту жизнь с WinWinBot —<br/>
       <span style="background:linear-gradient(135deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">обеспечь себя стабильным пассивом</span>
     </h2>
     <p style="font-size:17px;color:rgba(255,255,255,0.65);line-height:1.7;max-width:680px;margin:0 auto 56px;">
       С нами вы получаете необходимые инструменты и живую поддержку, что позволяет эффективно рекомендовать WinWinBot и зарабатывать годами
     </p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;">
+    <div class="selling-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;">
       <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:28px;">
         <div style="font-size:28px;margin-bottom:14px;">🎯</div>
         <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">Готовые промоматериалы</div>
