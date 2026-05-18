@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,14 +8,8 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Партнёрская программа WinWinBot — до 35% комиссии</title>
-<meta name="description" content="Зарабатывай до 35% с каждой подписки WinWinBot. Два уровня дохода. Стабильные выплаты на ИП, ООО, самозанятость."/>
+<meta name="description" content="Зарабатывай до 35% с каждой подписки WinWinBot. Два уровня дохода. Белые выплаты на ИП, ООО, самозанятость."/>
 <meta name="theme-color" content="#7c3aed"/>
-<style>
-/* SELLING BLOCK MOBILE FIX */
-@media(max-width:768px) {
-  .selling-grid { grid-template-columns: 1fr !important; }
-}
-</style>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
@@ -57,6 +52,23 @@ header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: r
 /* Hero visual */
 .hero-visual { background: linear-gradient(135deg, #1e1b4b, #312e81, #4c1d95); border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(79,70,229,0.4); position: relative; overflow: hidden; }
 .hero-visual::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; background: radial-gradient(circle, rgba(219,39,119,0.3), transparent 70%); border-radius:50%; }
+.dash-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 16px; }
+.dash-row { display: flex; gap: 12px; margin-bottom: 12px; }
+.dash-card { flex: 1; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 14px; backdrop-filter: blur(10px); }
+.dash-card-num { font-size: 20px; font-weight: 900; color: #fff; }
+.dash-card-sub { font-size: 10px; color: rgba(255,255,255,0.55); font-weight: 600; margin-top: 3px; text-transform: uppercase; letter-spacing: .04em; }
+.dash-bar-wrap { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 14px; }
+.dash-bar-title { font-size: 11px; color: rgba(255,255,255,0.6); font-weight: 600; margin-bottom: 10px; }
+.dash-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+.dash-bar-name { font-size: 11px; color: rgba(255,255,255,0.7); width: 60px; flex-shrink: 0; }
+.dash-bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 999px; overflow: hidden; }
+.dash-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #818cf8, #c084fc); }
+.dash-bar-val { font-size: 10px; color: rgba(255,255,255,0.7); font-weight: 700; width: 50px; text-align: right; }
+.dash-ref { display: flex; gap: 8px; margin-top: 12px; }
+.dash-ref-item { flex:1; background: rgba(255,255,255,0.08); border-radius: 8px; padding: 10px; text-align:center; }
+.dash-ref-n { font-size:16px; font-weight:900; color:#a5b4fc; }
+.dash-ref-s { font-size:9px; color:rgba(255,255,255,0.5); font-weight:600; margin-top:2px; text-transform:uppercase; letter-spacing:.03em; }
+
 .hv-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 20px; }
 .hv-commission-block { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
 .hv-comm-row { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 16px 18px; }
@@ -285,6 +297,91 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   .calc-result { grid-template-columns: 1fr !important; gap: 12px; }
 }
 </style>
+<style>
+/* SELLING BLOCK MOBILE FIX */
+@media(max-width:768px) {
+  .selling-grid { grid-template-columns: 1fr !important; }
+}
+
+
+/* ===== CALCULATOR ===== */
+.calc-wrap { max-width:900px; margin:0 auto; }
+.calc-title { text-align:center; font-size:clamp(1.8rem,3vw,2.4rem); font-weight:900; color:#fff; margin-bottom:6px; letter-spacing:-.03em; }
+.calc-sub { text-align:center; color:rgba(255,255,255,0.45); font-size:14px; margin-bottom:28px; }
+.calc-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:24px; padding:28px 32px; }
+
+/* Level sections */
+.calc-lvl-section { transition: opacity .3s; }
+.calc-lvl-title { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+.calc-lvl-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.dot1 { background:linear-gradient(135deg,#818cf8,#6366f1); }
+.dot2 { background:linear-gradient(135deg,#c084fc,#a855f7); }
+.calc-lvl-title span:nth-child(2) { font-size:14px; font-weight:800; color:#fff; text-transform:uppercase; letter-spacing:.06em; }
+.calc-lvl-rate-badge { background:rgba(129,140,248,0.2); color:#a5b4fc; font-size:12px; font-weight:800; padding:3px 10px; border-radius:8px; }
+.rate2-badge { background:rgba(192,132,252,0.15); color:#d8b4fe; }
+.calc-lvl-lock { font-size:11px; color:rgba(255,255,255,0.35); font-style:italic; margin-left:4px; }
+
+/* Two sliders per level */
+.calc-two-sliders { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:14px; }
+.calc-slider-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
+.calc-slider-label { font-size:11px; font-weight:700; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:.07em; }
+.calc-slider-value { font-size:19px; font-weight:900; color:#fff; }
+.calc-range { width:100%; -webkit-appearance:none; appearance:none; height:5px; border-radius:999px; outline:none; cursor:pointer; }
+.calc-range::-webkit-slider-thumb { -webkit-appearance:none; width:20px; height:20px; border-radius:50%; background:linear-gradient(135deg,#818cf8,#c084fc); border:2px solid #fff; box-shadow:0 2px 8px rgba(129,140,248,0.5); cursor:pointer; transition:transform .15s; }
+.calc-range::-webkit-slider-thumb:hover { transform:scale(1.2); }
+.calc-range::-moz-range-thumb { width:20px; height:20px; border-radius:50%; background:linear-gradient(135deg,#818cf8,#c084fc); border:2px solid #fff; cursor:pointer; }
+.calc-slider-hints { display:flex; justify-content:space-between; font-size:10px; color:rgba(255,255,255,0.25); margin-top:4px; }
+.calc-presets { display:flex; gap:5px; margin-top:7px; flex-wrap:wrap; }
+.calc-preset { padding:4px 11px; border-radius:999px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.13); color:rgba(255,255,255,0.55); font-size:11px; font-weight:700; cursor:pointer; transition:all .2s; }
+.calc-preset:hover { background:rgba(255,255,255,0.13); color:#fff; }
+.calc-preset.active { background:linear-gradient(135deg,#818cf8,#c084fc); border-color:transparent; color:#fff; }
+.calc-preset-p.active { background:linear-gradient(135deg,#a855f7,#c084fc); }
+
+/* Formula row */
+.calc-formula-row { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:9px 14px; flex-wrap:wrap; }
+.calc-formula-row.lvl1 { border-color:rgba(129,140,248,0.18); }
+.calc-formula-row.lvl2 { border-color:rgba(192,132,252,0.15); }
+.cf-val { font-size:13px; font-weight:900; color:#fff; }
+.cf-op { font-size:12px; color:rgba(255,255,255,0.28); }
+.cf-rate { font-size:12px; font-weight:900; color:#818cf8; background:rgba(129,140,248,0.15); padding:2px 7px; border-radius:5px; }
+.cf-rate.rate2 { color:#c084fc; background:rgba(192,132,252,0.12); }
+.cf-result { font-size:14px; font-weight:900; color:#a5b4fc; margin-left:4px; }
+.cf-result.result2 { color:#d8b4fe; }
+
+/* Separator */
+.calc-separator { display:flex; align-items:center; gap:12px; margin:20px 0; }
+.calc-sep-line { flex:1; height:1px; background:rgba(255,255,255,0.1); }
+.calc-sep-badge { font-size:11px; font-weight:800; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:.07em; padding:5px 14px; border:1px solid rgba(255,255,255,0.12); border-radius:999px; white-space:nowrap; }
+
+/* Totals */
+.calc-totals { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:20px; margin-bottom:12px; }
+.calc-total-card { border-radius:14px; padding:16px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); }
+.calc-total-card.lvl1 { border-color:rgba(129,140,248,0.4); background:rgba(129,140,248,0.1); }
+.calc-total-card.lvl2 { border-color:rgba(192,132,252,0.3); background:rgba(192,132,252,0.07); }
+.calc-total-card.lvl2.locked { opacity:0.4; }
+.calc-total-card.grand { border-color:rgba(165,180,252,0.5); background:linear-gradient(135deg,rgba(129,140,248,0.18),rgba(192,132,252,0.15)); }
+.calc-total-label { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.07em; color:rgba(255,255,255,0.45); margin-bottom:8px; }
+.calc-total-amount { font-size:clamp(1.1rem,2vw,1.5rem); font-weight:900; color:#fff; letter-spacing:-.02em; word-break:break-word; }
+.grand-amount { font-size:clamp(1.2rem,2.2vw,1.7rem); color:#c7d2fe; }
+.calc-total-year { font-size:11px; color:rgba(255,255,255,0.35); margin-top:5px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.07); }
+
+/* Level row */
+.calc-level-row { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:9px 14px; }
+.calc-level-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.calc-level-name { font-size:12px; font-weight:800; color:#fff; }
+.calc-level-hint { font-size:11px; color:rgba(255,255,255,0.38); margin-left:auto; }
+
+/* Note */
+.calc-note { font-size:11px; color:rgba(255,255,255,0.28); text-align:center; line-height:1.6; }
+.calc-note strong { color:rgba(255,255,255,0.5); }
+
+@media(max-width:768px){
+  .calc-two-sliders { grid-template-columns:1fr; gap:16px; }
+  .calc-totals { grid-template-columns:1fr; }
+  .calc-card { padding:20px 16px; }
+  .calc-level-hint { display:none; }
+}
+</style>
 </head>
 <body>
 
@@ -309,7 +406,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
       <div class="hero-badge">✦ Партнёрская программа WinWinBot</div>
       <h1 class="hero-h1">Зарабатывай<br/><span class="grad-text">до 35%</span><br/>с каждой подписки</h1>
       <p class="hero-sub">Рекомендуйте WinWinBot — сформируйте пассивный доход на годы вперёд<br/><span style="font-size:15px;color:#7c3aed;font-weight:700;">Стабильные выплаты, больше клиентов больше %</span></p>
-      
+
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-num grad-text">до 35%</div>
@@ -370,7 +467,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
     <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:999px;font-size:12px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:.04em;margin-bottom:20px;text-transform:uppercase;">✦ Стань партнёром WinWinBot</div>
     <h2 style="font-size:clamp(1.5rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.2;letter-spacing:-.03em;margin-bottom:16px;word-break:break-word;">
       Выиграй эту жизнь с WinWinBot —<br/>
-      <span style="background:linear-gradient(135deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">обеспечь себя стабильным пассивом</span>
+      <span style="background:linear-gradient(135deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">обеспечь себя стабильным пассивным доходом на годы вперёд</span>
     </h2>
     <p style="font-size:17px;color:rgba(255,255,255,0.65);line-height:1.7;max-width:680px;margin:0 auto 56px;">
       С нами вы получаете необходимые инструменты и живую поддержку, что позволяет эффективно рекомендовать WinWinBot и зарабатывать годами
@@ -541,73 +638,133 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 <section id="calculator">
   <div class="container calc-wrap">
     <h2 class="calc-title">Посчитай свой доход</h2>
-    <p class="calc-sub">Двигай ползунки — получи расчёт прямо сейчас</p>
-    <div class="calc-body">
+    <p class="calc-sub">Настрой каждый уровень отдельно — получи точный расчёт</p>
 
-      <div class="calc-slider-block">
-        <div class="calc-slider-header">
-          <label class="calc-slider-label">Количество рефералов</label>
-          <span class="calc-slider-value" id="refDisplay">15</span>
-        </div>
-        <input type="range" id="calcReferrals" min="1" max="100" value="15"
-               class="calc-range" oninput="syncSlider('calcReferrals','refDisplay',null); calcIncome()"/>
-        <div class="calc-slider-hints"><span>1</span><span>50</span><span>100</span></div>
-      </div>
+    <div class="calc-card">
 
-      <div class="calc-slider-block" style="margin-top:28px;">
-        <div class="calc-slider-header">
-          <label class="calc-slider-label">Средний тариф клиента (₽/мес)</label>
-          <span class="calc-slider-value" id="tariffDisplay">5 000 ₽</span>
+      <!-- УРОВЕНЬ 1 -->
+      <div class="calc-lvl-section">
+        <div class="calc-lvl-title">
+          <span class="calc-lvl-dot dot1"></span>
+          <span>1-й уровень</span>
+          <span class="calc-lvl-rate-badge" id="lvl1RateBadge">25%</span>
         </div>
-        <input type="range" id="calcTariff" min="2500" max="100000" step="500" value="5000"
-               class="calc-range" oninput="syncSlider('calcTariff','tariffDisplay','money'); calcIncome()"/>
-        <div class="calc-slider-hints"><span>2 500 ₽</span><span>50 000 ₽</span><span>100 000 ₽</span></div>
-        <div class="calc-presets">
-          <button class="calc-preset" onclick="setTariff(2500)">2 500 ₽</button>
-          <button class="calc-preset active" onclick="setTariff(5000)">5 000 ₽</button>
-          <button class="calc-preset" onclick="setTariff(10000)">10 000 ₽</button>
-          <button class="calc-preset" onclick="setTariff(20000)">20 000 ₽</button>
-        </div>
-      </div>
-
-      <div class="calc-dashboard">
-        <div class="calc-dash-top">
-          <div class="calc-trophy">🏆</div>
+        <div class="calc-two-sliders">
           <div>
-            <div class="calc-dash-level" id="calcLevelTitle">ТОП-ПАРТНЁР</div>
-            <div class="calc-dash-level-sub" id="calcLevelSub">Максимальная ставка</div>
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">Количество рефералов</span>
+              <span class="calc-slider-value" id="ref1Display">5</span>
+            </div>
+            <input type="range" id="calcRef1" min="1" max="100" value="5"
+                   class="calc-range" oninput="syncSlider('calcRef1','ref1Display',null); calcAll()"/>
+            <div class="calc-slider-hints"><span>1</span><span>50</span><span>100</span></div>
+          </div>
+          <div>
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">Средний тариф клиента (₽/мес)</span>
+              <span class="calc-slider-value" id="tariff1Display">10 000 ₽</span>
+            </div>
+            <input type="range" id="calcTariff1" min="2500" max="100000" step="500" value="10000"
+                   class="calc-range" oninput="syncSlider('calcTariff1','tariff1Display','money'); calcAll()"/>
+            <div class="calc-slider-hints"><span>2 500 ₽</span><span>50 000 ₽</span><span>100 000 ₽</span></div>
+            <div class="calc-presets">
+              <button class="calc-preset" onclick="setTariff(1,2500)">2 500 ₽</button>
+              <button class="calc-preset" onclick="setTariff(1,5000)">5 000 ₽</button>
+              <button class="calc-preset active" onclick="setTariff(1,10000)">10 000 ₽</button>
+              <button class="calc-preset" onclick="setTariff(1,20000)">20 000 ₽</button>
+            </div>
           </div>
         </div>
-        <div class="calc-result" id="calcResult">
-          <div class="calc-res-card" id="calcCard1">
-            <div class="calc-res-label">Комиссия 1 уровень</div>
-            <div class="calc-res-amount" id="calcCommRate">35%</div>
-            <div class="calc-res-sub">ставка партнёра</div>
-          </div>
-          <div class="calc-res-card" id="calcCard2">
-            <div class="calc-res-label">Ежемесячный доход</div>
-            <div class="calc-res-amount" id="calcMonthly">—</div>
-            <div class="calc-res-sub">1-й уровень</div>
-          </div>
-          <div class="calc-res-card" id="calcCard3">
-            <div class="calc-res-label">Доход 2 уровень</div>
-            <div class="calc-res-amount" id="calcLevel2">—</div>
-            <div class="calc-res-sub">Продвинутый и выше</div>
-          </div>
-          <div class="calc-res-card calc-res-card-wide" id="calcCard4">
-            <div class="calc-res-label">Годовой пассив</div>
-            <div class="calc-res-amount" id="calcYearly">—</div>
-            <div class="calc-res-sub">при удержании рефералов</div>
-          </div>
+        <!-- Формула 1 -->
+        <div class="calc-formula-row lvl1">
+          <span class="cf-val" id="fRef1">5</span>
+          <span class="cf-op">×</span>
+          <span class="cf-val" id="fTariff1">10 000 ₽</span>
+          <span class="cf-op">×</span>
+          <span class="cf-rate" id="fRate1">25%</span>
+          <span class="cf-op">=</span>
+          <span class="cf-result" id="fResult1">12 500 ₽/мес</span>
         </div>
       </div>
 
-      <div class="calc-level-badge">
-        <div class="calc-level-pill" id="calcLevelPill">
-          <span class="dot" id="calcDot" style="background:#818cf8;"></span>
-          <span id="calcLevelText">Введи данные выше</span>
+      <div class="calc-separator">
+        <div class="calc-sep-line"></div>
+        <div class="calc-sep-badge">+ 2-й уровень</div>
+        <div class="calc-sep-line"></div>
+      </div>
+
+      <!-- УРОВЕНЬ 2 -->
+      <div class="calc-lvl-section" id="lvl2section">
+        <div class="calc-lvl-title">
+          <span class="calc-lvl-dot dot2"></span>
+          <span>2-й уровень</span>
+          <span class="calc-lvl-rate-badge rate2-badge">10%</span>
+          <span class="calc-lvl-lock" id="lvl2lock">🔒 доступно с 10+ рефералов 1-го уровня</span>
+        </div>
+        <div class="calc-two-sliders">
+          <div>
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">Количество рефералов 2-го уровня</span>
+              <span class="calc-slider-value" id="ref2Display">10</span>
+            </div>
+            <input type="range" id="calcRef2" min="0" max="300" value="10"
+                   class="calc-range calc-range-purple" oninput="syncSlider('calcRef2','ref2Display',null); calcAll()"/>
+            <div class="calc-slider-hints"><span>0</span><span>150</span><span>300</span></div>
+          </div>
+          <div>
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">Средний тариф клиента (₽/мес)</span>
+              <span class="calc-slider-value" id="tariff2Display">10 000 ₽</span>
+            </div>
+            <input type="range" id="calcTariff2" min="2500" max="100000" step="500" value="10000"
+                   class="calc-range calc-range-purple" oninput="syncSlider('calcTariff2','tariff2Display','money'); calcAll()"/>
+            <div class="calc-slider-hints"><span>2 500 ₽</span><span>50 000 ₽</span><span>100 000 ₽</span></div>
+            <div class="calc-presets">
+              <button class="calc-preset calc-preset-p" onclick="setTariff(2,2500)">2 500 ₽</button>
+              <button class="calc-preset calc-preset-p" onclick="setTariff(2,5000)">5 000 ₽</button>
+              <button class="calc-preset calc-preset-p active" onclick="setTariff(2,10000)">10 000 ₽</button>
+              <button class="calc-preset calc-preset-p" onclick="setTariff(2,20000)">20 000 ₽</button>
+            </div>
+          </div>
+        </div>
+        <!-- Формула 2 -->
+        <div class="calc-formula-row lvl2">
+          <span class="cf-val" id="fRef2">10</span>
+          <span class="cf-op">×</span>
+          <span class="cf-val" id="fTariff2">10 000 ₽</span>
+          <span class="cf-op">×</span>
+          <span class="cf-rate rate2">10%</span>
+          <span class="cf-op">=</span>
+          <span class="cf-result result2" id="fResult2">10 000 ₽/мес</span>
         </div>
       </div>
+
+      <!-- ИТОГ -->
+      <div class="calc-totals">
+        <div class="calc-total-card lvl1">
+          <div class="calc-total-label">💰 1-й уровень / мес</div>
+          <div class="calc-total-amount" id="calcMonthly">—</div>
+          <div class="calc-total-year"><span id="calcYearly">—</span> в год</div>
+        </div>
+        <div class="calc-total-card lvl2" id="total2card">
+          <div class="calc-total-label">🔗 2-й уровень / мес</div>
+          <div class="calc-total-amount" id="calcLevel2Monthly">—</div>
+          <div class="calc-total-year"><span id="calcLevel2Yearly">—</span> в год</div>
+        </div>
+        <div class="calc-total-card grand">
+          <div class="calc-total-label">⚡ Итого / мес</div>
+          <div class="calc-total-amount grand-amount" id="calcTotal">—</div>
+          <div class="calc-total-year"><span id="calcTotalYearly">—</span> в год</div>
+        </div>
+      </div>
+
+      <div class="calc-level-row" style="margin-top:16px;margin-bottom:0;">
+        <span class="calc-level-dot" id="calcDot" style="background:#34d399;"></span>
+        <span class="calc-level-name" id="calcLevelName">СТАРТ — 25%</span>
+        <span class="calc-level-hint" id="calcLevelHint">Ещё 5 клиентов до Продвинутого</span>
+      </div>
+
+      <p class="calc-note" style="margin-top:12px;">* <strong>2-й уровень</strong> — 10% с оплат клиентов ваших рефералов. Деньги приходят, пока вы спите 😴 · Активируется с уровня <strong>Продвинутый (10+ рефералов)</strong></p>
     </div>
   </div>
 </section>
@@ -686,7 +843,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
         <div class="stars">★★★★★</div>
         <div class="review-earning grad-text">+87 500 ₽/мес</div>
         <p class="review-text">«Перевёл клиентов на WinWinBot, достиг ТОП-уровня за 2 месяца. Витрина приносит новых клиентов без рекламы.»</p>
-      </div>
+      
       <div class="review-card">
         <div class="review-top">
           <div class="review-avatar" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);">И</div>
@@ -915,77 +1072,93 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 function formatMoney(n) {
   return n.toLocaleString('ru-RU') + ' ₽';
 }
-
 function syncSlider(sliderId, displayId, mode) {
   const val = parseInt(document.getElementById(sliderId).value);
-  const el = document.getElementById(displayId);
-  el.textContent = mode === 'money' ? val.toLocaleString('ru-RU') + ' ₽' : val;
+  document.getElementById(displayId).textContent = mode === 'money' ? val.toLocaleString('ru-RU') + ' ₽' : val;
   updateSliderTrack(sliderId);
 }
-
 function updateSliderTrack(id) {
   const s = document.getElementById(id);
   const pct = ((s.value - s.min) / (s.max - s.min)) * 100;
-  s.style.background = `linear-gradient(to right, #818cf8 ${pct}%, rgba(255,255,255,0.15) ${pct}%)`;
+  const color = s.classList.contains('calc-range-purple') ? '#c084fc' : '#818cf8';
+  s.style.background = `linear-gradient(to right, ${color} ${pct}%, rgba(255,255,255,0.15) ${pct}%)`;
 }
-
-function setTariff(val) {
-  const slider = document.getElementById('calcTariff');
-  slider.value = val;
-  document.getElementById('tariffDisplay').textContent = val.toLocaleString('ru-RU') + ' ₽';
-  updateSliderTrack('calcTariff');
-  document.querySelectorAll('.calc-preset').forEach(btn => {
+function setTariff(level, val) {
+  const id = level === 1 ? 'calcTariff1' : 'calcTariff2';
+  const dispId = level === 1 ? 'tariff1Display' : 'tariff2Display';
+  const presetClass = level === 1 ? '.calc-preset:not(.calc-preset-p)' : '.calc-preset-p';
+  document.getElementById(id).value = val;
+  document.getElementById(dispId).textContent = val.toLocaleString('ru-RU') + ' ₽';
+  updateSliderTrack(id);
+  document.querySelectorAll(presetClass).forEach(btn => {
     btn.classList.toggle('active', parseInt(btn.textContent.replace(/\D/g,'')) === val);
   });
-  calcIncome();
+  calcAll();
 }
+function calcAll() {
+  const ref1   = parseInt(document.getElementById('calcRef1').value)   || 0;
+  const ref2   = parseInt(document.getElementById('calcRef2').value)   || 0;
+  const tariff1 = parseInt(document.getElementById('calcTariff1').value) || 0;
+  const tariff2 = parseInt(document.getElementById('calcTariff2').value) || 0;
 
-function calcIncome() {
-  const refs = parseInt(document.getElementById('calcReferrals').value) || 0;
-  const tariff = parseInt(document.getElementById('calcTariff').value) || 0;
-  let rate1, rate2, levelName, dotColor, levelTitle, levelSub, trophy;
-
-  if (refs >= 20) {
-    rate1=0.35; rate2=0.10;
-    levelTitle='ТОП-ПАРТНЁР'; levelSub='Максимальная ставка 35%';
-    levelName='🏆 ТОП-ПАРТНЁР — вы на максимуме!'; dotColor='#f59e0b'; trophy='🏆';
-  } else if (refs >= 10) {
-    rate1=0.30; rate2=0.10;
-    levelTitle='ПРОДВИНУТЫЙ'; levelSub='Ещё '+(20-refs)+' клиентов до ТОПа';
-    levelName='🔵 ПРОДВИНУТЫЙ — ещё '+(20-refs)+' клиентов до ТОПа'; dotColor='#818cf8'; trophy='🔵';
-  } else if (refs >= 1) {
-    rate1=0.25; rate2=0;
-    levelTitle='СТАРТ'; levelSub='Ещё '+(10-refs)+' клиентов до Продвинутого';
-    levelName='🟢 СТАРТ — ещё '+(10-refs)+' клиентов до уровня Продвинутый'; dotColor='#34d399'; trophy='🟢';
+  let rate1, dotColor, levelName, levelHint;
+  if (ref1 >= 20) {
+    rate1=0.35; dotColor='#f59e0b';
+    levelName='ТОП-ПАРТНЁР — 35%'; levelHint='Максимальная ставка 🏆';
+  } else if (ref1 >= 10) {
+    rate1=0.30; dotColor='#818cf8';
+    levelName='ПРОДВИНУТЫЙ — 30%'; levelHint='Ещё '+(20-ref1)+' клиентов до ТОПа';
   } else {
-    ['calcMonthly','calcYearly','calcLevel2','calcCommRate'].forEach(id=>document.getElementById(id).textContent='—');
-    document.getElementById('calcLevelText').textContent='Укажи количество рефералов';
-    document.getElementById('calcLevelTitle').textContent='Ваш уровень';
-    document.getElementById('calcLevelSub').textContent='Введите данные выше';
-    document.querySelector('.calc-trophy').textContent='🏆';
-    return;
+    rate1=0.25; dotColor='#34d399';
+    levelName='СТАРТ — 25%'; levelHint='Ещё '+(10-ref1)+' клиентов до Продвинутого';
   }
 
-  const monthly = Math.round(refs * tariff * rate1);
-  const yearly = monthly * 12;
-  const level2 = rate2 > 0 ? Math.round(refs * 3 * tariff * rate2) : 0;
+  // Level 1: ref1 × tariff1 × rate1
+  const m1 = Math.round(ref1 * tariff1 * rate1);
+  const y1 = m1 * 12;
 
-  document.getElementById('calcCommRate').textContent = Math.round(rate1*100)+'%';
-  document.getElementById('calcMonthly').textContent = formatMoney(monthly);
-  document.getElementById('calcYearly').textContent = formatMoney(yearly);
-  document.getElementById('calcLevel2').textContent = rate2>0 ? formatMoney(level2) : 'Не активен';
-  document.getElementById('calcLevelText').textContent = levelName;
+  // Level 2: ref2 × tariff2 × 10% (только Продвинутый+)
+  const hasLvl2 = ref1 >= 10;
+  const m2 = hasLvl2 ? Math.round(ref2 * tariff2 * 0.10) : 0;
+  const y2 = m2 * 12;
+
+  const total_m = m1 + m2;
+  const total_y = y1 + y2;
+
+  // Level badge
   document.getElementById('calcDot').style.background = dotColor;
-  document.getElementById('calcLevelTitle').textContent = levelTitle;
-  document.getElementById('calcLevelSub').textContent = levelSub;
-  document.querySelector('.calc-trophy').textContent = trophy;
-  ['calcCard1','calcCard2','calcCard3','calcCard4'].forEach(id=>document.getElementById(id).classList.add('active'));
-}
+  document.getElementById('calcLevelName').textContent = levelName;
+  document.getElementById('calcLevelHint').textContent = levelHint;
+  document.getElementById('lvl1RateBadge').textContent = Math.round(rate1*100)+'%';
 
-// Инициализация
-updateSliderTrack('calcReferrals');
-updateSliderTrack('calcTariff');
-calcIncome();
+  // Formulas
+  document.getElementById('fRef1').textContent = ref1;
+  document.getElementById('fTariff1').textContent = tariff1.toLocaleString('ru-RU') + ' ₽';
+  document.getElementById('fRate1').textContent = Math.round(rate1*100)+'%';
+  document.getElementById('fResult1').textContent = formatMoney(m1)+'/мес';
+
+  document.getElementById('fRef2').textContent = ref2;
+  document.getElementById('fTariff2').textContent = tariff2.toLocaleString('ru-RU') + ' ₽';
+  document.getElementById('fResult2').textContent = hasLvl2 ? formatMoney(m2)+'/мес' : '—';
+
+  // Lvl2 lock state
+  const lvl2sec = document.getElementById('lvl2section');
+  const lvl2lock = document.getElementById('lvl2lock');
+  const total2 = document.getElementById('total2card');
+  lvl2sec.style.opacity = hasLvl2 ? '1' : '0.45';
+  lvl2lock.style.display = hasLvl2 ? 'none' : 'inline';
+  total2.classList.toggle('locked', !hasLvl2);
+
+  // Result cards
+  document.getElementById('calcMonthly').textContent = formatMoney(m1);
+  document.getElementById('calcYearly').textContent = formatMoney(y1);
+  document.getElementById('calcLevel2Monthly').textContent = hasLvl2 ? formatMoney(m2) : '—';
+  document.getElementById('calcLevel2Yearly').textContent = hasLvl2 ? formatMoney(y2) : '—';
+  document.getElementById('calcTotal').textContent = formatMoney(total_m);
+  document.getElementById('calcTotalYearly').textContent = formatMoney(total_y);
+}
+['calcRef1','calcRef2','calcTariff1','calcTariff2'].forEach(updateSliderTrack);
+calcAll();
 
 // FAQ
 function toggleFaq(btn) {
