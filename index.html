@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -154,6 +155,43 @@ section { padding: 80px 24px; }
 .grace-note { margin-top: 28px; text-align: center; font-size: 13px; color: #6b7280; background: rgba(245,243,255,0.6); border: 1px solid rgba(124,58,237,0.12); border-radius: 14px; padding: 14px 20px; }
 .grace-note strong { color: #5b21b6; }
 
+/* CALCULATOR */
+#calculator { background: linear-gradient(135deg, #0f0c29, #1e1b4b, #2d1b4e); padding: 80px 24px; }
+.calc-wrap { max-width: 900px; margin: 0 auto; }
+.calc-title { text-align: center; font-size: clamp(1.8rem,3vw,2.5rem); font-weight: 900; color: #fff; margin-bottom: 10px; letter-spacing: -.03em; }
+.calc-sub { text-align: center; color: rgba(255,255,255,0.55); font-size: 16px; margin-bottom: 48px; }
+.calc-body { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; padding: 40px; backdrop-filter: blur(12px); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 32px; }
+.calc-field label { display: block; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.7); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em; }
+.calc-slider-block { margin-bottom: 4px; }
+.calc-slider-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.calc-slider-label { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: .05em; }
+.calc-slider-value { font-size: 20px; font-weight: 900; color: #fff; }
+.calc-range { width: 100%; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px; background: rgba(255,255,255,0.15); outline: none; cursor: pointer; }
+.calc-range::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg,#818cf8,#c084fc); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(129,140,248,0.5); cursor: pointer; transition: transform .15s; }
+.calc-range::-webkit-slider-thumb:hover { transform: scale(1.2); }
+.calc-range::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg,#818cf8,#c084fc); border: 3px solid #fff; cursor: pointer; }
+.calc-slider-hints { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 6px; font-weight: 600; }
+.calc-presets { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.calc-preset { padding: 7px 16px; border-radius: 999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 700; cursor: pointer; transition: all .2s; }
+.calc-preset:hover { background: rgba(255,255,255,0.18); color: #fff; }
+.calc-preset.active { background: linear-gradient(135deg,#818cf8,#c084fc); border-color: transparent; color: #fff; box-shadow: 0 2px 12px rgba(129,140,248,0.4); }
+.calc-dashboard { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 28px; margin-top: 32px; }
+.calc-dash-top { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.calc-trophy { font-size: 28px; }
+.calc-dash-level { font-size: 18px; font-weight: 900; color: #fff; letter-spacing: .02em; }
+.calc-dash-level-sub { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 2px; }
+.calc-result { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.calc-res-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 20px; text-align: center; transition: all .3s; }
+.calc-res-card.active { background: rgba(255,255,255,0.15); border-color: rgba(165,180,252,0.5); box-shadow: 0 0 0 2px rgba(129,140,248,0.3); }
+.calc-res-label { font-size: 11px; color: rgba(255,255,255,0.5); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
+.calc-res-amount { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -.02em; word-wrap: break-word; }
+.calc-res-sub { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 4px; font-weight: 600; }
+.calc-res-card-wide { grid-column: 1 / -1; }
+.calc-level-badge { text-align: center; margin-top: 24px; }
+.calc-level-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); font-size: 14px; font-weight: 700; color: #fff; }
+.calc-level-pill .dot { width: 8px; height: 8px; border-radius: 50%; }
+
 /* MILESTONES */
 #milestones { background: #fff; }
 .milestones-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -166,7 +204,7 @@ section { padding: 80px 24px; }
 
 /* SOCIAL PROOF */
 #proof { background: linear-gradient(180deg, rgba(239,246,255,0.4) 0%, #fff 100%); }
-.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .review-card { background: #fff; border-radius: 20px; padding: 28px; border: 1px solid rgba(124,58,237,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: all .25s; }
 .review-card:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(124,58,237,0.12); }
 .review-top { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
@@ -183,8 +221,8 @@ section { padding: 80px 24px; }
 .why-card { background: linear-gradient(135deg, #fafafa, #f5f3ff 100%); border-radius: 18px; padding: 26px; border: 1px solid rgba(124,58,237,0.1); transition: all .25s; }
 .why-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(124,58,237,0.1); border-color: rgba(124,58,237,0.25); }
 .why-icon { font-size: 28px; margin-bottom: 14px; }
-.why-title { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
-.why-desc { font-size: 14px; color: #6b7280; line-height: 1.6; }
+.why-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
+.why-desc { font-size: 15.5px; color: #6b7280; line-height: 1.6; }
 
 /* PAYOUTS */
 #payouts { background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); }
@@ -242,7 +280,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 @media(max-width:1024px){
   .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
-  .segments, .levels-grid, .milestones-track, .reviews, .why-grid { grid-template-columns: 1fr !important; }
+  .segments, .levels-grid, .milestones-track, .reviews, .why-grid, .selling-grid { grid-template-columns: 1fr !important; }
   .steps { grid-template-columns: 1fr; }
   .calc-grid { grid-template-columns: 1fr; }
   .calc-result { grid-template-columns: 1fr; }
@@ -256,7 +294,15 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   .hero-stats { flex-direction: column; gap: 12px; }
   .hero-buttons { flex-direction: column; }
   .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+  .calc-result { grid-template-columns: 1fr !important; gap: 12px; }
 }
+</style>
+<style>
+/* SELLING BLOCK MOBILE FIX */
+@media(max-width:768px) {
+  .selling-grid { grid-template-columns: 1fr !important; }
+}
+
 
 /* ===== CALCULATOR ===== */
 .calc-wrap { max-width:900px; margin:0 auto; }
@@ -264,8 +310,9 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 .calc-sub { text-align:center; color:rgba(255,255,255,0.45); font-size:14px; margin-bottom:28px; }
 .calc-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:24px; padding:28px 32px; }
 
+/* Level sections */
 .calc-lvl-section { transition: opacity .3s; }
-.calc-lvl-title { display:flex; align-items:center; gap:8px; margin-bottom:16px; flex-wrap:wrap; }
+.calc-lvl-title { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
 .calc-lvl-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
 .dot1 { background:linear-gradient(135deg,#818cf8,#6366f1); }
 .dot2 { background:linear-gradient(135deg,#c084fc,#a855f7); }
@@ -274,6 +321,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 .rate2-badge { background:rgba(192,132,252,0.15); color:#d8b4fe; }
 .calc-lvl-lock { font-size:11px; color:rgba(255,255,255,0.35); font-style:italic; margin-left:4px; }
 
+/* Two sliders per level */
 .calc-two-sliders { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:14px; }
 .calc-slider-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
 .calc-slider-label { font-size:11px; font-weight:700; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:.07em; }
@@ -289,6 +337,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 .calc-preset.active { background:linear-gradient(135deg,#818cf8,#c084fc); border-color:transparent; color:#fff; }
 .calc-preset-p.active { background:linear-gradient(135deg,#a855f7,#c084fc); }
 
+/* Formula row */
 .calc-formula-row { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:9px 14px; flex-wrap:wrap; }
 .calc-formula-row.lvl1 { border-color:rgba(129,140,248,0.18); }
 .calc-formula-row.lvl2 { border-color:rgba(192,132,252,0.15); }
@@ -299,10 +348,12 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 .cf-result { font-size:14px; font-weight:900; color:#a5b4fc; margin-left:4px; }
 .cf-result.result2 { color:#d8b4fe; }
 
+/* Separator */
 .calc-separator { display:flex; align-items:center; gap:12px; margin:20px 0; }
 .calc-sep-line { flex:1; height:1px; background:rgba(255,255,255,0.1); }
 .calc-sep-badge { font-size:11px; font-weight:800; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:.07em; padding:5px 14px; border:1px solid rgba(255,255,255,0.12); border-radius:999px; white-space:nowrap; }
 
+/* Totals */
 .calc-totals { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:20px; margin-bottom:12px; }
 .calc-total-card { border-radius:14px; padding:16px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); }
 .calc-total-card.lvl1 { border-color:rgba(129,140,248,0.4); background:rgba(129,140,248,0.1); }
@@ -314,11 +365,13 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 .grand-amount { font-size:clamp(1.2rem,2.2vw,1.7rem); color:#c7d2fe; }
 .calc-total-year { font-size:11px; color:rgba(255,255,255,0.35); margin-top:5px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.07); }
 
+/* Level row */
 .calc-level-row { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:9px 14px; }
 .calc-level-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
 .calc-level-name { font-size:12px; font-weight:800; color:#fff; }
 .calc-level-hint { font-size:11px; color:rgba(255,255,255,0.38); margin-left:auto; }
 
+/* Note */
 .calc-note { font-size:11px; color:rgba(255,255,255,0.28); text-align:center; line-height:1.6; }
 .calc-note strong { color:rgba(255,255,255,0.5); }
 
@@ -330,13 +383,59 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 }
 
 /* ===== HERO CASE STRIP ===== */
-.hero-case-strip { display:flex; align-items:center; gap:12px; background:linear-gradient(135deg,rgba(37,99,235,0.08),rgba(124,58,237,0.1)); border:1px solid rgba(124,58,237,0.2); border-radius:14px; padding:12px 18px; margin-top:20px; flex-wrap:wrap; }
-.hero-case-fire { font-size:18px; flex-shrink:0; }
-.hero-case-text { font-size:14px; color:#374151; line-height:1.4; flex:1; min-width:200px; }
+
+
+
 .hero-case-text strong { color:#111; }
-.hero-case-link { font-size:13px; font-weight:800; color:#5b21b6; text-decoration:none; white-space:nowrap; padding:6px 14px; border-radius:8px; background:rgba(124,58,237,0.1); border:1px solid rgba(124,58,237,0.2); transition:all .2s; flex-shrink:0; }
+
 .hero-case-link:hover { background:rgba(124,58,237,0.18); }
 
+
+/* ===== HERO CASE STRIP (FIXED & RESPONSIVE) ===== */
+.hero-case-strip { 
+  display:flex; 
+  align-items:center; 
+  gap:16px; 
+  background:linear-gradient(135deg, rgba(239,246,255,0.9), rgba(245,243,255,0.9)); 
+  border:2px solid rgba(124,58,237,0.3); 
+  border-radius:16px; 
+  padding:20px; 
+  margin-top:32px; 
+  box-shadow:0 12px 30px rgba(124,58,237,0.15); 
+}
+.hero-case-fire { font-size:28px; flex-shrink:0; line-height:1; }
+.hero-case-text { font-size:16px; color:#111; line-height:1.5; flex:1; font-weight:500; }
+.hero-case-text .hc-tag { display:block; font-size:12px; font-weight:800; color:#7c3aed; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px; }
+.hero-case-text strong { font-size:18px; font-weight:900; color:#111; background:linear-gradient(135deg,#2563eb,#7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-case-link { 
+  font-size:14px; 
+  font-weight:800; 
+  color:#fff; 
+  text-decoration:none; 
+  white-space:nowrap; 
+  padding:12px 20px; 
+  border-radius:12px; 
+  background:linear-gradient(135deg,#2563eb,#7c3aed); 
+  transition:all .2s; 
+  flex-shrink:0; 
+  box-shadow: 0 4px 14px rgba(124,58,237,0.3);
+}
+.hero-case-link:hover { transform:scale(1.04); box-shadow: 0 8px 20px rgba(124,58,237,0.4); }
+
+@media(max-width:768px){
+  .hero-case-strip { 
+    flex-direction:column; 
+    align-items:flex-start; 
+    padding:16px; 
+    gap:12px; 
+    margin-top:24px;
+    border-width: 1px;
+  }
+  .hero-case-fire { display:none; /* hide emoji on mobile to save space, or keep it small */ }
+  .hero-case-text { font-size:15px; }
+  .hero-case-text strong { font-size:16px; }
+  .hero-case-link { width:100%; text-align:center; padding:14px; }
+}
 /* ===== CASE MAIN CARD ===== */
 .case-main-card { display:grid; grid-template-columns:320px 1fr; gap:32px; background:linear-gradient(135deg,#f8faff,#f5f3ff); border:1px solid rgba(124,58,237,0.12); border-radius:24px; padding:36px; margin-bottom:32px; }
 .case-left { display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
@@ -399,13 +498,15 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 }
 @media(max-width:768px){
   .case-stats-grid { grid-template-columns:1fr 1fr; }
-  .hero-case-strip { gap:8px; }
+  
   .case-toast { left:16px; right:16px; max-width:none; bottom:16px; }
 }
+
 </style>
 </head>
 <body>
-  <!-- HEADER -->
+
+<!-- HEADER -->
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
@@ -422,24 +523,23 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   <div class="hero-orb1"></div>
   <div class="hero-orb2"></div>
   <div class="hero-inner container">
-
     <div>
       <div class="hero-badge">✦ Партнёрская программа WinWinBot</div>
       <h1 class="hero-h1">Зарабатывай<br/><span class="grad-text">до 35%</span><br/>с каждой подписки</h1>
-      <p class="hero-sub">Рекомендуй платформу и получай пассивный доход. Выплаты от 1,5 тыс. до сотен тысяч рублей ежемесячно, пока клиенты продлевают тариф.</p>
-      
+      <p class="hero-sub">Рекомендуйте WinWinBot — сформируйте пассивный доход на годы вперёд<br/><span style="font-size:15px;color:#7c3aed;font-weight:700;">Стабильные выплаты, больше клиентов больше %</span></p>
+
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-num grad-text">до 35%</div>
-          <div class="hero-stat-label">с оплат 1 уровня</div>
+          <div class="hero-stat-label">Комиссия 1 уровень</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num grad-text">10%</div>
-          <div class="hero-stat-label">с оплат 2 уровня</div>
+          <div class="hero-stat-num grad-text">+10%</div>
+          <div class="hero-stat-label">Доход 2 уровень</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num grad-text">от 1,5 млн</div>
-          <div class="hero-stat-label">выплачено партнёрам</div>
+          <div class="hero-stat-num grad-text">1,5 года</div>
+          <div class="hero-stat-label">Закрепление реферала</div>
         </div>
       </div>
 
@@ -450,51 +550,44 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
         </a>
         <a href="#calculator" class="btn-secondary">Посчитать доход →</a>
       </div>
-
       <!-- CASE STRIP BANNER -->
       <div class="hero-case-strip">
         <span class="hero-case-fire">🔥</span>
-        <span class="hero-case-text"><strong>Кейс партнёра:</strong> Алексей заработал <strong>6 878 000 ₽</strong> за 2 года — купил BMW и закрыл ипотеку</span>
+        <span class="hero-case-text"><span class="hc-tag">Кейс партнёра:</span> Алексей заработал <strong>6 878 000 ₽</strong> за 2 года — купил BMW и закрыл ипотеку</span>
         <a href="#case" class="hero-case-link">Смотреть кейс →</a>
       </div>
+
     </div>
 
-    <!-- HERO VISUAL -->
+
+
+    <!-- HERO VISUAL — selling cards -->
     <div class="hero-visual">
-      <div class="dash-label">Твой личный кабинет партнёра</div>
-      
-      <div class="dash-row">
-        <div class="dash-card">
-          <div class="dash-card-num" style="background:linear-gradient(135deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">87 500 ₽</div>
-          <div class="dash-card-sub">К выплате сейчас</div>
+      <div class="hv-label">Партнёрская программа WinWinBot</div>
+      <div class="hv-commission-block">
+        <div class="hv-comm-row">
+          <div class="hv-comm-left">
+            <div class="hv-comm-pct gold">до 35%</div>
+            <div class="hv-comm-desc">с каждой прямой оплаты вашего реферала</div>
+          </div>
+          <div class="hv-comm-icon">💰</div>
         </div>
-        <div class="dash-card">
-          <div class="dash-card-num" style="color:#fff;">23</div>
-          <div class="dash-card-sub">Активных реферала</div>
-        </div>
-      </div>
-
-      <div class="dash-bar-wrap" style="margin-bottom:12px;">
-        <div class="dash-bar-title">Структура дохода</div>
-        <div class="dash-bar-row">
-          <div class="dash-bar-name">Уровень 1</div>
-          <div class="dash-bar-track"><div class="dash-bar-fill" style="width:85%;"></div></div>
-          <div class="dash-bar-val">35% ставка</div>
-        </div>
-        <div class="dash-bar-row">
-          <div class="dash-bar-name">Уровень 2</div>
-          <div class="dash-bar-track"><div class="dash-bar-fill" style="width:45%;background:linear-gradient(90deg,#f0abfc,#818cf8);"></div></div>
-          <div class="dash-bar-val">10% ставка</div>
+        <div class="hv-comm-row">
+          <div class="hv-comm-left">
+            <div class="hv-comm-pct purple">до 10%</div>
+            <div class="hv-comm-desc">с оплат рефералов ваших клиентов (2-й уровень)</div>
+          </div>
+          <div class="hv-comm-icon">🔗</div>
         </div>
       </div>
-
-      <div class="dash-ref">
-        <div class="dash-ref-item"><div class="dash-ref-n">Продвинутый</div><div class="dash-ref-s">Текущий уровень</div></div>
-        <div class="dash-ref-item"><div class="dash-ref-n">14</div><div class="dash-ref-s">Новых переходов</div></div>
-        <div class="dash-ref-item"><div class="dash-ref-n">10</div><div class="dash-ref-s">Оплат в этом месяце</div></div>
+      <div class="hv-pin-block">
+        <div class="hv-pin-icon">📌</div>
+        <div class="hv-pin-text">
+          <div class="hv-pin-num">до 1,5 лет</div>
+          <div class="hv-pin-label">Закрепление рефералов за вами</div>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -505,7 +598,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
     <!-- SECTION LABEL -->
     <div style="text-align:center; margin-bottom:48px;">
       <span class="section-label">💼 Реальный кейс партнёра</span>
-      <h2 class="section-title">Как обычный человек заработал<br/><span class="grad-text">6 878 000 ₽ за 2 года</span></h2>
+      <h2 class="section-title">Как партнер заработал<br/><span class="grad-text">6 878 000 ₽ за 2 года</span></h2>
       <p class="section-sub" style="margin:0 auto;">Купил BMW X5 и закрыл ипотеку — работая с WinWinBot как партнёр</p>
     </div>
 
@@ -516,12 +609,12 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
       <div class="case-left">
         <div class="case-avatar">А</div>
         <div class="case-person">
-          <div class="case-name">Алексей М.</div>
+          <div class="case-name">Алексей М. <span style="font-size:12px; font-weight:600; color:#6b7280;">(имя скрыто по просьбе партнёра)</span></div>
           <div class="case-role">Партнёр WinWinBot · Москва</div>
           <div class="case-level-badge">⭐ ТОП-партнёр · 35%</div>
         </div>
         <blockquote class="case-quote">
-          «Я начинал с нуля — просто рассказывал друзьям про WinWinBot. Через год это стало основным доходом. Через два — купил BMW и закрыл ипотеку досрочно.»
+          «Умею привлекать людей и, узнав про партнерку WinWinBot, решил попробовать. Спасибо за сопровождение, по началу это был приятный бонус. Через год это стало основным доходом. Через два — купил BMW и закрыл ипотеку досрочно.»
         </blockquote>
         <a href="#cta" class="case-cta-btn">Хочу так же →</a>
       </div>
@@ -539,16 +632,6 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
             <div class="case-stat-icon">📅</div>
             <div class="case-stat-num">286 583 ₽</div>
             <div class="case-stat-label">Средний доход в месяц</div>
-          </div>
-          <div class="case-stat-card">
-            <div class="case-stat-icon">👥</div>
-            <div class="case-stat-num">47</div>
-            <div class="case-stat-label">Рефералов на пике</div>
-          </div>
-          <div class="case-stat-card">
-            <div class="case-stat-icon">📈</div>
-            <div class="case-stat-num">35%</div>
-            <div class="case-stat-label">Ставка комиссии</div>
           </div>
         </div>
 
@@ -626,35 +709,65 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   </div>
 </section>
 
+
+
+<!-- SELLING BLOCK -->
+<section style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#4c1d95 100%);padding:80px 24px;">
+  <div class="container" style="max-width:1100px;text-align:center;">
+    <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:999px;font-size:12px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:.04em;margin-bottom:20px;text-transform:uppercase;">✦ Стань партнёром WinWinBot</div>
+    <h2 style="font-size:clamp(1.5rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.2;letter-spacing:-.03em;margin-bottom:16px;word-break:break-word;">
+      Выиграй эту жизнь с WinWinBot —<br/>
+      <span style="background:linear-gradient(135deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">обеспечь себя стабильным пассивным доходом на годы вперёд</span>
+    </h2>
+    <p style="font-size:17px;color:rgba(255,255,255,0.65);line-height:1.7;max-width:680px;margin:0 auto 56px;">
+      С нами вы получаете необходимые инструменты и живую поддержку, что позволяет эффективно рекомендовать WinWinBot и зарабатывать годами
+    </p>
+    <div class="selling-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;">
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:28px;">
+        <div style="font-size:28px;margin-bottom:14px;">🎯</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">Готовые промоматериалы</div>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Баннеры, тексты, скрипты — всё готово. Не нужно думать, как представить продукт.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:28px;">
+        <div style="font-size:28px;margin-bottom:14px;">💬</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">Живая поддержка и сообщество</div>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Обучение, вебинары, личный менеджер. Мы всегда на связи и помогаем с вопросами.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:28px;">
+        <div style="font-size:28px;margin-bottom:14px;">📊</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">Личный кабинет партнёра</div>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;">Детальная статистика по рефералам, выплатам и уровню. Всё в реальном времени.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOR WHOM -->
 <section id="for-whom">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">Для кого</span>
-      <h2 class="section-title">Кому идеально подойдёт<br/><span class="grad-text">наша партнёрка</span></h2>
-      <p class="section-sub">Не нужно быть продажником. Достаточно рекомендовать полезный инструмент тем, кому он реально нужен.</p>
+      <span class="section-label">Кому подходит</span>
+      <h2 class="section-title">Неважно, есть ли у тебя бизнес,<br/><span class="grad-text">блог или просто связи</span></h2>
+      <p class="section-sub">Выбери свой путь — и начни зарабатывать уже сегодня</p>
     </div>
-
     <div class="segments">
       <div class="seg-card purple">
-        <div class="seg-icon purple">📱</div>
-        <div class="seg-title">Маркетологи, SMM</div>
-        <p class="seg-desc">Настраиваете автоворонки или чат-боты клиентам? Делайте это на WinWinBot и забирайте до 35% от их оплат 10 лет подряд. Идеальный пассивный доход с тех, кто и так вам платит за работу.</p>
-        <span class="seg-tag">Высшая выгода — до 35%</span>
+        <div class="seg-icon purple">🔧</div>
+        <div class="seg-title">Интеграторы, агентства и SMM</div>
+        <p class="seg-desc">Внедряешь чат-боты клиентам? Подключай их к WinWinBot и зарабатывай до 35% с каждой оплаты + 10% со второго уровня. ТОП-партнёрам бесплатно передаём лиды через Витрину.</p>
+        <span class="seg-tag">До 35% + лиды от нас</span>
       </div>
-
       <div class="seg-card pink">
-        <div class="seg-icon pink">🤝</div>
-        <div class="seg-title">Интеграторы, IT-студии</div>
-        <p class="seg-desc">Внедряете решения для бизнеса. Получайте постоянную комиссию с платежей клиентов от 1,5 тыс. рублей ежемесячно. Просто добавьте WinWinBot в свой арсенал.</p>
-        <span class="seg-tag">Стабильный доход</span>
+        <div class="seg-icon pink">📢</div>
+        <div class="seg-title">Блогеры, онлайн-школы и эксперты</div>
+        <p class="seg-desc">Рекомендуй платформу аудитории. Реферал закрепляется за тобой на срок до 1,5 лет. Один пост — годы пассивного дохода.</p>
+        <span class="seg-tag">Пассивный доход годами</span>
       </div>
-
       <div class="seg-card teal">
-        <div class="seg-icon teal">🎓</div>
-        <div class="seg-title">Создатели курсов</div>
-        <p class="seg-desc">Обучаете бизнесу или маркетингу? WinWinBot может стать отличным инструментом для ваших учеников. Обучайте их на нашей платформе и получайте процент с их подписок.</p>
-        <span class="seg-tag">Пассив с учеников</span>
+        <div class="seg-icon teal">👤</div>
+        <div class="seg-title">Активные пользователи</div>
+        <p class="seg-desc">Используешь WinWinBot сам? Делись ссылкой с коллегами. Нет ИП? Оформи самозанятость за 5 минут и получай выплаты на карту.</p>
+        <span class="seg-tag">Старт без ИП за 5 минут</span>
       </div>
     </div>
   </div>
@@ -665,24 +778,23 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   <div class="container">
     <div class="section-head">
       <span class="section-label">Как это работает</span>
-      <h2 class="section-title">Твой путь к <span class="grad-text">пассивному доходу</span></h2>
+      <h2 class="section-title">Три шага до <span class="grad-text">первой выплаты</span></h2>
     </div>
-
     <div class="steps">
       <div class="step">
         <div class="step-num grad-bg">1</div>
-        <div class="step-title">Регистрация</div>
-        <p class="step-desc">Оставляешь заявку. Получаешь доступ в партнёрский кабинет с личной реферальной ссылкой и материалами для продвижения.</p>
+        <div class="step-title">Регистрируешься</div>
+        <p class="step-desc">Заполняешь анкету. Менеджер активирует кабинет и выдаёт персональную партнёрскую ссылку.</p>
       </div>
       <div class="step">
         <div class="step-num grad-bg">2</div>
-        <div class="step-title">Привлечение</div>
-        <p class="step-desc">Делишься ссылкой с клиентами, подписчиками или учениками. Кто перешёл по ссылке и оплатил — закрепляется за тобой навсегда.</p>
+        <div class="step-title">Делишься ссылкой</div>
+        <p class="step-desc">Реферал закрепляется автоматически. Он получает бонус: скидку 10% на первую оплату. Ему выгодно — тебе легче продавать.</p>
       </div>
       <div class="step">
         <div class="step-num grad-bg">3</div>
-        <div class="step-title">Выплаты</div>
-        <p class="step-desc">Получаешь процент каждый раз, когда твои рефералы продлевают подписку. Вывод средств на карту, самозанятость или ИП.</p>
+        <div class="step-title">Получаешь выплаты</div>
+        <p class="step-desc">Комиссия начисляется с каждой оплаты реферала автоматически. Вывод с 1 по 10 число на ООО, ИП или самозанятость.</p>
       </div>
     </div>
   </div>
@@ -692,90 +804,82 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 <section id="levels">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">Уровни и ставки</span>
-      <h2 class="section-title">Больше рефералов —<br/><span class="grad-text">выше твой процент</span></h2>
-      <p class="section-sub">Твоя комиссия растёт вместе с количеством активных клиентов. А со 2-го уровня ты получаешь доход даже с тех, кого привели твои клиенты.</p>
+      <span class="section-label">Уровни программы</span>
+      <h2 class="section-title">Чем больше рефералов —<br/><span class="grad-text">тем выше ставка</span></h2>
+      <p class="section-sub">Растёшь по уровням автоматически. Грейс-период 2 месяца при падении числа клиентов.</p>
     </div>
-
     <div class="levels-grid">
-      <!-- Старт -->
+      <!-- СТАРТ -->
       <div class="level-card">
-        <div class="level-badge start">Старт</div>
-        <div class="level-name">Начинающий</div>
-        <div class="level-referrals">1–9 активных клиентов</div>
-        
+        <div class="level-badge start">🟢 Старт</div>
+        <div class="level-name">Старт</div>
+        <div class="level-referrals">1–9 активных рефералов</div>
         <div class="level-commission">
           <div class="commission-main grad-text">25%</div>
-          <div class="commission-label">с оплат 1-го уровня</div>
+          <div class="commission-label">с каждой оплаты реферала</div>
           <div class="commission-2nd" style="margin-top:10px;">
-            <span style="font-size:13px;color:#9ca3af;font-weight:600;">2-й уровень недоступен</span>
+            <span style="font-size:13px;color:#9ca3af;font-weight:600;">Второй уровень: —</span>
           </div>
         </div>
-
         <div class="level-divider"></div>
         <ul class="level-features">
-          <li><span class="icon">💸</span><span>Комиссия <strong>25%</strong> всегда</span></li>
-          <li><span class="icon">🔒</span><span>Выплаты от 1 клиента</span></li>
-          <li><span class="icon">⏱</span><span>Закрепление на 10 лет</span></li>
-          <li><span class="icon">❌</span><span>Нет 2-го уровня</span></li>
+          <li><span class="icon">⏱️</span><span>Срок закрепления реферала: <strong>6 месяцев</strong></span></li>
+          <li><span class="icon">🔗</span><span>Только 1 уровень дохода</span></li>
+          <li><span class="icon">🎁</span><span>Реферал получает 10% скидку на первую оплату</span></li>
+          <li><span class="icon">📊</span><span>Личный кабинет с аналитикой</span></li>
         </ul>
-        <a href="#cta" class="level-card-cta outline">Начать зарабатывать</a>
+        <a href="#cta" class="level-card-cta outline">Начать</a>
       </div>
 
-      <!-- Продвинутый (Featured) -->
+      <!-- ПРОДВИНУТЫЙ -->
       <div class="level-card featured">
-        <div style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:999px;font-size:11px;font-weight:800;color:#fff;letter-spacing:.05em;">САМЫЙ ЧАСТЫЙ</div>
-        <div class="level-badge pro">Продвинутый</div>
-        <div class="level-name" style="color:#fff;">Опытный партнёр</div>
-        <div class="level-referrals" style="color:rgba(255,255,255,0.55);">10–19 активных клиентов</div>
-        
+        <div style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:999px;font-size:11px;font-weight:800;color:#fff;letter-spacing:.05em;">ПОПУЛЯРНЫЙ</div>
+        <div class="level-badge pro">🔵 Продвинутый</div>
+        <div class="level-name" style="color:#fff;">Продвинутый</div>
+        <div class="level-referrals" style="color:rgba(255,255,255,0.55);">10–19 активных рефералов</div>
         <div class="level-commission">
           <div class="commission-main" style="color:#fff;">30%</div>
-          <div class="commission-label" style="color:rgba(255,255,255,0.55);">с оплат 1-го уровня</div>
+          <div class="commission-label" style="color:rgba(255,255,255,0.55);">с каждой оплаты реферала</div>
           <div class="commission-2nd">
             <span class="commission-2nd-badge active-w">+10%</span>
-            <span class="commission-2nd-text" style="color:rgba(255,255,255,0.55);">со 2-го уровня</span>
+            <span class="commission-2nd-text" style="color:rgba(255,255,255,0.55);">со второго уровня</span>
           </div>
         </div>
-
         <div class="level-divider w"></div>
         <ul class="level-features">
-          <li><span class="icon">🔥</span><span style="color:rgba(255,255,255,0.8);">Повышенная ставка <strong style="color:#fff;">30%</strong></span></li>
-          <li><span class="icon">🔗</span><span style="color:rgba(255,255,255,0.8);">Открывается 2-й уровень</span></li>
-          <li><span class="icon">💤</span><span style="color:rgba(255,255,255,0.8);">Пассивный доход - 7 дней в неделю</span></li>
-          <li><span class="icon">🏆</span><span style="color:rgba(255,255,255,0.8);">Помощь персонального менеджера</span></li>
+          <li><span class="icon">⏱️</span><span style="color:rgba(255,255,255,0.8);">Срок закрепления: <strong style="color:#fff;">1 год</strong></span></li>
+          <li><span class="icon">🔥</span><span style="color:rgba(255,255,255,0.8);">Доход с рефералов твоих партнёров</span></li>
+          <li><span class="icon">🛡️</span><span style="color:rgba(255,255,255,0.8);">Грейс-период при падении ниже 7 — <strong style="color:#fff;">2 месяца</strong></span></li>
+          <li><span class="icon">🎁</span><span style="color:rgba(255,255,255,0.8);">Реферал получает 10% скидку на первую оплату</span></li>
         </ul>
-        <a href="#cta" class="level-card-cta white">Стать Продвинутым</a>
+        <a href="#cta" class="level-card-cta white">Стать партнёром</a>
       </div>
 
-      <!-- ТОП -->
+      <!-- ТОП-ПАРТНЁР -->
       <div class="level-card">
-        <div class="level-badge top">Максимум</div>
-        <div class="level-name">ТОП-партнёр</div>
-        <div class="level-referrals">От 20 активных клиентов</div>
-        
+        <div class="level-badge top">🏆 Топ-партнёр</div>
+        <div class="level-name">Топ-партнёр</div>
+        <div class="level-referrals">20+ активных рефералов</div>
         <div class="level-commission">
           <div class="commission-main grad-text">35%</div>
-          <div class="commission-label">с оплат 1-го уровня</div>
+          <div class="commission-label">с каждой оплаты реферала</div>
           <div class="commission-2nd">
             <span class="commission-2nd-badge active">+10%</span>
-            <span class="commission-2nd-text">со 2-го уровня</span>
+            <span class="commission-2nd-text">со второго уровня</span>
           </div>
         </div>
-
         <div class="level-divider"></div>
         <ul class="level-features">
-          <li><span class="icon">👑</span><span>Максимальная ставка <strong>35%</strong></span></li>
-          <li><span class="icon">🎁</span><span>Особые условия для клиентов</span></li>
-          <li><span class="icon">💼</span><span>Прямой контакт с основателями</span></li>
-          <li><span class="icon">🌟</span><span>VIP-поддержка 24/7</span></li>
+          <li><span class="icon">⏱️</span><span>Срок закрепления: <strong>1,5 года</strong></span></li>
+          <li><span class="icon">🏅</span><span>Место на Витрине интеграторов — лиды от нас</span></li>
+          <li><span class="icon">🎧</span><span>Приоритетная поддержка</span></li>
+          <li><span class="icon">🛡️</span><span>Грейс-период при падении ниже 14 — <strong>2 месяца</strong></span></li>
         </ul>
-        <a href="#cta" class="level-card-cta outline">Хочу в ТОП</a>
+        <a href="#cta" class="level-card-cta outline">Расти до Топа</a>
       </div>
     </div>
-    
     <div class="grace-note" style="margin-top:24px;">
-      💡 <strong>Грейс-период:</strong> Если у вас упало количество клиентов, ставка сохраняется ещё <strong>2 месяца</strong>. У вас будет время вернуть показатели без потери дохода.
+      <strong>Грейс-период:</strong> если число активных рефералов упало ниже порога — даётся <strong>2 месяца</strong> на восстановление без потери ставки и срока закрепления.
     </div>
   </div>
 </section>
@@ -821,6 +925,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
             </div>
           </div>
         </div>
+        <!-- Формула 1 -->
         <div class="calc-formula-row lvl1">
           <span class="cf-val" id="fRef1">5</span>
           <span class="cf-op">×</span>
@@ -872,6 +977,7 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
             </div>
           </div>
         </div>
+        <!-- Формула 2 -->
         <div class="calc-formula-row lvl2">
           <span class="cf-val" id="fRef2">10</span>
           <span class="cf-op">×</span>
@@ -912,33 +1018,33 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
     </div>
   </div>
 </section>
+
 <!-- MILESTONES -->
 <section id="milestones">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">Достижения</span>
-      <h2 class="section-title">Бонусы за <span class="grad-text">крутые результаты</span></h2>
-      <p class="section-sub">Мы ценим активных партнёров. Достигайте целей и получайте приятные подарки от команды.</p>
+      <span class="section-label">Вехи и награды</span>
+      <h2 class="section-title">Достигай целей —<br/><span class="grad-text">получай больше денег и статус</span></h2>
+      <p class="section-sub">Бонусы сверх основной комиссии за накопленные подписки рефералов</p>
     </div>
-
     <div class="milestones-track">
       <div class="milestone-card">
-        <div class="milestone-icon">🎁</div>
+        <div class="milestone-icon">🥉</div>
         <div class="milestone-num grad-text">30</div>
-        <div class="milestone-sub">активных клиентов</div>
-        <div class="milestone-reward">Мерч-бокс (худи, термокружка, блокнот) + 3 месяца подписки бесплатно</div>
+        <div class="milestone-sub">подписок рефералов</div>
+        <div class="milestone-reward">3 месяца тарифа «Профессиональный» бесплатно</div>
       </div>
       <div class="milestone-card" style="border-color:rgba(124,58,237,0.25);background:linear-gradient(135deg,#fafafa,#f5f3ff);">
-        <div class="milestone-icon">✈️</div>
+        <div class="milestone-icon">🥈</div>
         <div class="milestone-num grad-text">150</div>
-        <div class="milestone-sub">активных клиентов</div>
-        <div class="milestone-reward">Билет на <strong>закрытый слёт партнёров</strong> (перелёт и проживание оплачивает WinWinBot)</div>
+        <div class="milestone-sub">подписок рефералов</div>
+        <div class="milestone-reward">6 месяцев тарифа + размещение в <strong>Витрине интеграторов</strong> — лиды от WinWinBot бесплатно</div>
       </div>
       <div class="milestone-card" style="border-color:rgba(217,119,6,0.3);background:linear-gradient(135deg,#fffbeb,#fef3c7);">
         <div class="milestone-icon">🏆</div>
         <div class="milestone-num" style="background:linear-gradient(135deg,#d97706,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:36px;font-weight:900;letter-spacing:-.04em;margin-bottom:6px;">300</div>
-        <div class="milestone-sub">активных клиентов</div>
-        <div class="milestone-reward">Apple MacBook Pro 14" + <strong>персональный ужин</strong> с основателями (Zoom или оффлайн)</div>
+        <div class="milestone-sub">подписок рефералов</div>
+        <div class="milestone-reward">1 год тарифа + <strong>эксклюзивный мерч</strong> (купить нельзя, такой будет только у тебя) + личная Zoom-сессия с CEO</div>
       </div>
     </div>
   </div>
@@ -948,48 +1054,57 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 <section id="proof">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">Отзывы</span>
-      <h2 class="section-title">Что говорят <br/><span class="grad-text">наши партнёры</span></h2>
+      <span class="section-label">Партнёры зарабатывают</span>
+      <h2 class="section-title">Реальные результаты<br/><span class="grad-text">наших партнёров</span></h2>
     </div>
-
     <div class="reviews">
       <div class="review-card">
         <div class="review-top">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#2563eb,#7c3aed);">С</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#2563eb,#7c3aed);">А</div>
+          <div>
+            <div class="review-name">Алексей К.</div>
+            <div class="review-role">Интегратор чат-ботов</div>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="review-earning grad-text">+18 750 ₽/мес</div>
+        <p class="review-text">«Подключил первых 3 клиентов за неделю. Теперь стабильный пассивный доход без лишних усилий.»</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#7c3aed,#db2777);">М</div>
+          <div>
+            <div class="review-name">Марина Д.</div>
+            <div class="review-role">Блогер, онлайн-школа</div>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="review-earning grad-text">+42 000 ₽/мес</div>
+        <p class="review-text">«Один пост дал 7 регистраций. Теперь получаю процент с двух уровней — это реально работает.»</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#0891b2,#7c3aed);">С</div>
           <div>
             <div class="review-name">Сергей В.</div>
-            <div class="review-role">Маркетолог-фрилансер</div>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <div class="review-earning grad-text">18 750 ₽/мес</div>
-        <p class="review-text">«Раньше собирал ботов клиентам и просто отдавал. Теперь сажаю их по своей ссылке. Времени трачу 0, а 3 клиента стабильно оплачивают мою коммуналку каждый месяц.»</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#7c3aed,#db2777);">О</div>
-          <div>
-            <div class="review-name">Ольга К.</div>
-            <div class="review-role">Владелец онлайн-школы</div>
-          </div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <div class="review-earning grad-text">42 000 ₽/мес</div>
-        <p class="review-text">«Учу делать запуски в телеграм. Добавила урок про WinWinBot со своей ссылкой. В итоге 7 учеников перешли на платник + стали подтягивать своих. Отличный бонус к запускам!»</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#0891b2,#7c3aed);">И</div>
-          <div>
-            <div class="review-name">Игорь Т.</div>
             <div class="review-role">SMM-агентство</div>
           </div>
         </div>
         <div class="stars">★★★★★</div>
-        <div class="review-earning grad-text">87 500 ₽/мес</div>
-        <p class="review-text">«Внедрили WinWinBot всем клиентам агентства. Сейчас у нас статус ТОП, комиссия 35%. За 2 года это вылилось в сумму, равную зарплате хорошего мидла, только пассивно.»</p>
+        <div class="review-earning grad-text">+87 500 ₽/мес</div>
+        <p class="review-text">«Перевёл клиентов на WinWinBot, достиг ТОП-уровня за 2 месяца. Витрина приносит новых клиентов без рекламы.»</p>
+      
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);">И</div>
+          <div>
+            <div class="review-name">Иван П.</div>
+            <div class="review-role">Интегратор amoCRM</div>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="review-earning grad-text">+500 000 ₽/мес</div>
+        <p class="review-text">«Перевёл крупных клиентов на платформу. За счёт высоких чеков комиссия стала основным источником дохода агентства.»</p>
       </div>
     </div>
   </div>
@@ -999,41 +1114,40 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 <section id="why">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">Почему это просто</span>
+      <span class="section-label">Сомневаешься что у тебя получится?</span>
       <h2 class="section-title">WinWinBot <span class="grad-text">продаёт себя сам</span></h2>
-      <p class="section-sub">Вам не придётся уговаривать. Продукт объективно крутой и закрывает реальные боли рынка.</p>
+      <p class="section-sub">Тебе не нужно «впаривать» — достаточно показать возможности</p>
     </div>
-
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon">⚡️</div>
-        <div class="why-title">Всё в одном окне</div>
-        <p class="why-desc">Чат-боты, рассылки, мини-лендинги, прием оплат и аналитика. Клиенту больше не нужно платить за 5 разных сервисов — он экономит до 30 тыс. в месяц.</p>
+        <div class="why-icon">⚡</div>
+        <div class="why-title">Готовые шаблоны и автоворонки</div>
+        <p class="why-desc">Клиент запускает продающую цепочку за 30 минут. Не нужно быть технарём. Наш сервис интуитивно понятнее конкурентов, не требует сложных настроек.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">🔌</div>
-        <div class="why-title">Готовые интеграции</div>
-        <p class="why-desc">amoCRM, Bitrix24, GetCourse, YCLIENTS подключаются в 2 клика без программистов. Бизнесу это жизненно необходимо.</p>
+        <div class="why-icon">🔗</div>
+        <div class="why-title">Бесшовные интеграции</div>
+        <p class="why-desc">amoCRM, Bitrix24, GetCourse, YCLIENTS и другие. Клиенты не ломают текущие процессы.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">🎁</div>
-        <div class="why-title">Щедрый триал</div>
-        <p class="why-desc">Мы даём бесплатный тариф до 1000 подписчиков. Клиент может собрать бота, запустить трафик, заработать первые деньги и только потом оплатить подписку.</p>
+        <div class="why-title">Бонус рефералу</div>
+        <p class="why-desc">По твоей ссылке клиент получает 10% скидку на первую оплату. Ему проще принять решение - тебе получить свое вознаграждение</p>
       </div>
       <div class="why-card">
         <div class="why-icon">📱</div>
-        <div class="why-title">Работает везде</div>
-        <p class="why-desc">Telegram, ВКонтакте, Одноклассники, WhatsApp, Viber — бот собирается один раз и работает во всех мессенджерах одинаково.</p>
+        <div class="why-title">Мультиканальность</div>
+        <p class="why-desc">Telegram, ВКонтакте, Одноклассники, Max — все сценарии стабильно. Клиенты видят результат сразу.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">📚</div>
-        <div class="why-title">База знаний и шаблоны</div>
-        <p class="why-desc">Новичку не нужно ломать голову. У нас сотни готовых шаблонов под любой бизнес и подробные видеоинструкции.</p>
+        <div class="why-icon">📊</div>
+        <div class="why-title">Прозрачная аналитика</div>
+        <p class="why-desc">Заявки и оплата в реальном времени. Ты всегда знаешь, сколько заработал.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">🛡</div>
-        <div class="why-title">Стабильность 99,9%</div>
-        <p class="why-desc">Инфраструктура держит любые нагрузки. Во время крупных запусков боты не падают. Поддержка отвечает 24/7.</p>
+        <div class="why-icon">🛡️</div>
+        <div class="why-title">99,9% аптайм и поддержка 24/7</div>
+        <p class="why-desc">Не придётся краснеть перед клиентом за баги. Оперативная техподдержка без выходных.</p>
       </div>
     </div>
   </div>
@@ -1043,31 +1157,30 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 <section id="payouts">
   <div class="container">
     <div class="section-head">
-      <span class="section-label">Выплаты</span>
-      <h2 class="section-title">Всё честно, <span class="grad-text">прозрачно и вбелую</span></h2>
-      <p class="section-sub">Никаких серых схем. Выплачиваем деньги официально с закрывающими документами.</p>
+      <span class="section-label">Условия выплат</span>
+      <h2 class="section-title">Деньги приходят <span class="grad-text">прозрачно и вовремя</span></h2>
+      <p class="section-sub">Белые выплаты на бизнес-счёт. Никаких ручных проверок — всё автоматизировано.</p>
     </div>
-
     <div class="payouts-grid">
       <div class="payout-card">
         <div class="payout-icon">🏦</div>
-        <div class="payout-title">Куда платим</div>
-        <p class="payout-desc">На расчётный счёт ИП, ООО или карту Самозанятого. Выплаты происходят с 1 по 10 число каждого месяца. Минимальная сумма — 3 000 рублей.</p>
+        <div class="payout-title">Вывод на расчётный счёт</div>
+        <p class="payout-desc">Доступно для ООО, ИП и самозанятых. Заявки принимаются с 1 по 10 число следующего месяца. <strong>Нет минимальной суммы на вывод</strong>.</p>
       </div>
       <div class="payout-card">
-        <div class="payout-icon">📜</div>
-        <div class="payout-title">Документы</div>
-        <p class="payout-desc">Работаем по договору-оферте. В конце месяца формируем Акт выполненных работ в ЭДО. Если у вас нет ЭДО — можно обменяться оригиналами почтой.</p>
+        <div class="payout-icon">⏳</div>
+        <div class="payout-title">Холд и возвраты</div>
+        <p class="payout-desc">Холд выплат — 14 дней. Если клиент вернул деньги в первые 14 дней — комиссия за этот заказ обнуляется. Уже выплаченные суммы не отзываются. Никакого риска для твоего дохода.</p>
       </div>
       <div class="payout-card">
-        <div class="payout-icon">🤔</div>
-        <div class="payout-title">А если я физлицо без статуса?</div>
-        <p class="payout-desc">Оформить самозанятость занимает 5 минут через приложение «Мой Налог». Это бесплатно, а налог составит всего 6%. Мы поможем и подскажем как это сделать.</p>
+        <div class="payout-icon">📝</div>
+        <div class="payout-title">Самозанятость за 5 минут</div>
+        <p class="payout-desc">Нет ИП? Оформи самозанятость через «Мой налог» — это занимает 5 минут. После этого пробиваешь чек, загружаешь ссылку — и деньги идут на карту.</p>
       </div>
       <div class="payout-card">
-        <div class="payout-icon">📊</div>
-        <div class="payout-title">Прозрачная статистика</div>
-        <p class="payout-desc">В кабинете вы видите каждый переход по ссылке, каждую регистрацию и оплату. Статистика обновляется в реальном времени.</p>
+        <div class="payout-icon">💎</div>
+        <div class="payout-title">Бонусами — оплата тарифа</div>
+        <p class="payout-desc">Если не хочешь выводить деньги — зачитывай комиссию в счёт своей подписки WinWinBot. Удобно для пользователей платформы без оформления юрлица.</p>
       </div>
     </div>
   </div>
@@ -1078,37 +1191,57 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   <div class="container">
     <div class="section-head">
       <span class="section-label">Вопросы и ответы</span>
-      <h2 class="section-title">Остались вопросы? <span class="grad-text">Отвечаем</span></h2>
+      <h2 class="section-title">Остались вопросы? <span class="grad-text">Отвечаем честно</span></h2>
     </div>
-
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Что, если клиент перешёл по моей ссылке, но оплатил через месяц? <span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Мы используем cookie, которые живут 90 дней. Если клиент перешёл по ссылке сегодня, а зарегистрировался через два месяца — он всё равно закрепится за вами навсегда. Главное, чтобы он не чистил cookie в браузере.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Как зарегистрировать клиента по моей ссылке?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Поделись своей партнёрской ссылкой — клиент закрепляется за тобой автоматически сразу после регистрации. Никаких ручных действий не требуется. Статус и привязка видны в личном кабинете в реальном времени.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Как работает 2-й уровень, если я сам никого туда не приводил? <span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Это самая вкусная часть! Допустим, вы привели SMM-агентство. Агентство тоже стало партнёром и привело 10 своих клиентов. Агентство получает свои 25-35%, а вы — 10% со всех платежей этих 10 клиентов. И так каждый месяц.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Что будет, если клиент перестал платить?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Начисление комиссии прекращается — ранее выплаченные суммы не возвращаются. Если клиент возобновит подписку в течение срока закрепления — он снова начнёт приносить тебе доход. Ты ничего не теряешь из уже полученного.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Я могу сам зарегистрироваться по своей ссылке и получать скидку? <span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Нет, правилами партнёрской программы запрещено регистрировать свои проекты по своей же ссылке. Система безопасности WinWinBot отслеживает такие пересечения. Если мы выявим фрод — аккаунт будет заблокирован. Партнёрка создана для привлечения новых клиентов, а не для получения скидки 5%.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Могу ли я стать партнёром без ИП?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Да. Без ИП можно получать комиссию в виде зачёта на оплату собственного тарифа WinWinBot. Для вывода деньгами на карту — нужно оформить самозанятость. Это занимает 5 минут через приложение «Мой налог».</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Как часто обновляется статистика переходов? <span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Статистика по переходам и регистрациям обновляется моментально. Данные по оплатам и начислениям появляются в личном кабинете сразу после того, как банк подтверждает транзакцию клиента (обычно это занимает от 1 до 10 минут). Выплата заработанных средств — с 1 по 10 число следующего месяца при достижении порога в 3 000 руб.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Когда и как приходят выплаты?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Заявки на вывод принимаются с 1 по 10 число следующего месяца. Для ИП/ООО — акт автоматически через ЭДО (Диадок/СБИС). Для самозанятых — пробиваешь чек в «Мой налог» и загружаешь ссылку. Минимальная сумма для вывода: 3 000 ₽.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Что делать, если у меня нет сайта или блога для размещения ссылки? <span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Многие успешные партнёры начинают без площадок. Вы можете предлагать инструмент своим клиентам при личных консультациях, рекомендовать в профильных чатах Telegram (где это уместно), или просто дать ссылку знакомому предпринимателю. Даже 10 человек, которым вы помогли автоматизировать бизнес лично, дадут вам стабильный пассивный доход.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Что такое второй уровень и когда он включается?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Второй уровень — это комиссия 10% с оплат рефералов, которых привлёк твой реферал. Доступно начиная с уровня «Продвинутый» (10+ активных рефералов). То есть ты зарабатываешь не только со своих клиентов, но и с клиентов своих партнёров.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Допустим, я привел клиента, а потом он отменил подписку. Что с процентом? <span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Вы получаете процент только с фактических оплат. Если клиент перестал платить — начисления приостанавливаются. Но как только он возобновит подписку (даже через год) — вы снова начнете получать свой процент. Именно поэтому мы рекомендуем строить долгосрочные отношения с клиентами и следить, чтобы инструмент приносил им пользу.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Можно ли потерять уровень, если рефералы ушли?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Нет, не сразу. При падении ниже порога уровня тебе даётся грейс-период 2 месяца — без потери ставки и срока закрепления рефералов. За это время можно найти замену. Только если в течение 2 месяцев не восстановишь уровень — происходит понижение.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Могу ли я лить платный трафик (Яндекс.Директ, VK) на партнёрскую ссылку? <span class="faq-arrow">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Да, вы можете использовать таргетированную и контекстную рекламу. Строго запрещено только одно: использовать контекстную рекламу на бренд (по запросам "WinWinBot", "винвинбот" и т.д.). Любой другой трафик — разрешён и приветствуется.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Как попасть на Витрину интеграторов?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Витрина доступна ТОП-партнёрам (20+ активных рефералов) или партнёрам, достигшим 150 оплаченных подписок в рамках вех. Твой профиль увидят клиенты WinWinBot, которые ищут специалистов по настройке ботов — это бесплатный поток лидов.</div></div>
       </div>
     </div>
   </div>
@@ -1117,51 +1250,55 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
 <!-- CTA FINAL -->
 <section id="cta">
   <div class="container">
-    <h2 class="cta-title"><br/><span style="background:linear-gradient(135deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Готовы стать партнёром WinWinBot?</span></h2>
-    <p class="cta-sub">Заполните короткую форму. Мы пришлём доступы в кабинет и материалы для старта.</p>
+    <h2 class="cta-title">Готов зарабатывать<br/><span style="background:linear-gradient(135deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">вместе с WinWinBot?</span></h2>
+    <p class="cta-sub">Регистрация бесплатна. Первые выплаты — уже в следующем месяце.</p>
 
     <div class="reg-form" id="regForm">
       <div class="form-grid">
         <div class="form-field">
           <label>Имя</label>
-          <input type="text" id="fName" placeholder="Иван Иванов" required />
+          <input type="text" id="fName" placeholder="Александр" required/>
         </div>
         <div class="form-field">
           <label>Email</label>
-          <input type="email" id="fEmail" placeholder="you@example.com" required />
+          <input type="email" id="fEmail" placeholder="you@example.com" required/>
         </div>
         <div class="form-field">
-          <label>Telegram для связи</label>
-          <input type="text" id="fTelegram" placeholder="@username или +7..." required />
+          <label>Телефон</label>
+          <input type="text" id="fTelegram" placeholder="+7..." required/>
         </div>
         <div class="form-field">
-          <label>Кто вы?</label>
+          <label>Тип деятельности</label>
           <select id="fType">
-            <option value="">Выберите вариант...</option>
-            <option value="integrator">Интегратор / Агентство</option>
-            <option value="blogger">Блогер / Автор курса</option>
-            <option value="smm">SMM-специалист / Маркетолог</option>
-            <option value="user">Просто активный пользователь</option>
+            <option value="">Выбери...</option>
+            <option value="integrator">Интегратор / агентство</option>
+            <option value="blogger">Блогер / онлайн-школа</option>
+            <option value="smm">SMM-специалист</option>
+            <option value="user">Активный пользователь</option>
+            <option value="other">Другое</option>
           </select>
         </div>
         <div class="form-field form-full">
-          <label>Сколько клиентов планируете привести за месяц?</label>
+          <label>Планируемое кол-во клиентов в месяц</label>
           <select id="fCount">
-            <option value="">Выберите вариант...</option>
-            <option value="lt10">Меньше 10</option>
-            <option value="10-50">10–50</option>
-            <option value="51-100">51–100</option>
-            <option value="100+">Больше 100</option>
+            <option value="">Выбери...</option>
+            <option value="lt10">до 10</option>
+            <option value="11-50">11-50</option>
+            <option value="51-100">51-100</option>
+            <option value="100-300">100-300</option>
+            <option value="300+">300+</option>
           </select>
         </div>
       </div>
-      <button class="form-submit grad-bg" onclick="submitForm(event)">Получить партнёрский доступ</button>
-      <p class="form-note">Нажимая кнопку, вы соглашаетесь с условиями партнёрской программы</p>
+      <button class="form-submit grad-bg" onclick="submitForm(event)">
+        ⚡ Стать партнёром
+      </button>
+      <p class="form-note">Нажимая кнопку, вы соглашаетесь с условиями партнёрской программы и обработкой персональных данных</p>
     </div>
 
     <div class="form-success" id="formSuccess">
-      <h3>Заявка принята! 🎉</h3>
-      <p>Мы отправили письмо с подтверждением на ваш Email.<br/>Проверьте папку «Спам» или «Промоакции», если письма долго нет.<br/><br/>Добро пожаловать в команду.</p>
+      <h3>🎉 Заявка принята!</h3>
+      <p>Проверь почту — приветственное письмо уже в пути.<br/>Также проверь папку «Спам», на всякий случай.<br/><br/>Менеджер свяжется с тобой в течение рабочего дня и активирует кабинет.</p>
     </div>
   </div>
 </section>
@@ -1171,12 +1308,12 @@ footer { background: #0f0c29; padding: 40px 24px; text-align: center; }
   <div class="footer-inner">
     <div class="footer-logo">WinWinBot</div>
     <div class="footer-links">
-      <a href="#" class="underline">Правила партнёрской программы</a>
-      <a href="#" class="underline">Политика конфиденциальности</a>
-      <a href="https://winwinbot.com" class="underline">Главный сайт</a>
-      <a href="https://t.me/infinitypartership" class="underline">Поддержка партнёров</a>
+      <a href="#">Условия программы</a>
+      <a href="#">Политика конфиденциальности</a>
+      <a href="https://winwinbot.com">Главный сайт</a>
+      <a href="https://t.me/infinity_partership">Написать менеджеру</a>
     </div>
-    <div class="footer-copy">© 2025 WinWinBot. Все права защищены. ООО «ВинВинТех».</div>
+    <div class="footer-copy">© 2025 WinWinBot. Все права защищены. Выплаты только на ООО / ИП / Самозанятых.</div>
   </div>
 </footer>
 
@@ -1209,26 +1346,28 @@ function setTariff(level, val) {
   calcAll();
 }
 function calcAll() {
-  const ref1 = parseInt(document.getElementById('calcRef1').value) || 0;
-  const ref2 = parseInt(document.getElementById('calcRef2').value) || 0;
+  const ref1   = parseInt(document.getElementById('calcRef1').value)   || 0;
+  const ref2   = parseInt(document.getElementById('calcRef2').value)   || 0;
   const tariff1 = parseInt(document.getElementById('calcTariff1').value) || 0;
   const tariff2 = parseInt(document.getElementById('calcTariff2').value) || 0;
 
   let rate1, dotColor, levelName, levelHint;
   if (ref1 >= 20) {
-    rate1 = 0.35; dotColor = '#f59e0b';
-    levelName = 'ТОП-ПАРТНЁР — 35%'; levelHint = 'Максимальная ставка 🏆';
+    rate1=0.35; dotColor='#f59e0b';
+    levelName='ТОП-ПАРТНЁР — 35%'; levelHint='Максимальная ставка 🏆';
   } else if (ref1 >= 10) {
-    rate1 = 0.30; dotColor = '#818cf8';
-    levelName = 'ПРОДВИНУТЫЙ — 30%'; levelHint = 'Ещё ' + (20 - ref1) + ' клиентов до ТОПа';
+    rate1=0.30; dotColor='#818cf8';
+    levelName='ПРОДВИНУТЫЙ — 30%'; levelHint='Ещё '+(20-ref1)+' клиентов до ТОПа';
   } else {
-    rate1 = 0.25; dotColor = '#34d399';
-    levelName = 'СТАРТ — 25%'; levelHint = 'Ещё ' + (10 - ref1) + ' клиентов до Продвинутого';
+    rate1=0.25; dotColor='#34d399';
+    levelName='СТАРТ — 25%'; levelHint='Ещё '+(10-ref1)+' клиентов до Продвинутого';
   }
 
+  // Level 1: ref1 × tariff1 × rate1
   const m1 = Math.round(ref1 * tariff1 * rate1);
   const y1 = m1 * 12;
 
+  // Level 2: ref2 × tariff2 × 10% (только Продвинутый+)
   const hasLvl2 = ref1 >= 10;
   const m2 = hasLvl2 ? Math.round(ref2 * tariff2 * 0.10) : 0;
   const y2 = m2 * 12;
@@ -1236,20 +1375,23 @@ function calcAll() {
   const total_m = m1 + m2;
   const total_y = y1 + y2;
 
+  // Level badge
   document.getElementById('calcDot').style.background = dotColor;
   document.getElementById('calcLevelName').textContent = levelName;
   document.getElementById('calcLevelHint').textContent = levelHint;
-  document.getElementById('lvl1RateBadge').textContent = Math.round(rate1 * 100) + '%';
+  document.getElementById('lvl1RateBadge').textContent = Math.round(rate1*100)+'%';
 
+  // Formulas
   document.getElementById('fRef1').textContent = ref1;
   document.getElementById('fTariff1').textContent = tariff1.toLocaleString('ru-RU') + ' ₽';
-  document.getElementById('fRate1').textContent = Math.round(rate1 * 100) + '%';
-  document.getElementById('fResult1').textContent = formatMoney(m1) + '/мес';
+  document.getElementById('fRate1').textContent = Math.round(rate1*100)+'%';
+  document.getElementById('fResult1').textContent = formatMoney(m1)+'/мес';
 
   document.getElementById('fRef2').textContent = ref2;
   document.getElementById('fTariff2').textContent = tariff2.toLocaleString('ru-RU') + ' ₽';
-  document.getElementById('fResult2').textContent = hasLvl2 ? formatMoney(m2) + '/мес' : '—';
+  document.getElementById('fResult2').textContent = hasLvl2 ? formatMoney(m2)+'/мес' : '—';
 
+  // Lvl2 lock state
   const lvl2sec = document.getElementById('lvl2section');
   const lvl2lock = document.getElementById('lvl2lock');
   const total2 = document.getElementById('total2card');
@@ -1257,6 +1399,7 @@ function calcAll() {
   lvl2lock.style.display = hasLvl2 ? 'none' : 'inline';
   total2.classList.toggle('locked', !hasLvl2);
 
+  // Result cards
   document.getElementById('calcMonthly').textContent = formatMoney(m1);
   document.getElementById('calcYearly').textContent = formatMoney(y1);
   document.getElementById('calcLevel2Monthly').textContent = hasLvl2 ? formatMoney(m2) : '—';
@@ -1281,15 +1424,17 @@ function submitForm(e) {
   const name = document.getElementById('fName').value.trim();
   const email = document.getElementById('fEmail').value.trim();
   const tg = document.getElementById('fTelegram').value.trim();
+
   if (!name || !email || !tg) {
-    alert('Пожалуйста, заполните Имя, Email и Telegram');
+    alert('Пожалуйста, заполни обязательные поля: Имя, Email и Телефон');
     return;
   }
+
   document.getElementById('regForm').style.display = 'none';
   document.getElementById('formSuccess').style.display = 'block';
 }
 
-// Smooth scroll
+// Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
